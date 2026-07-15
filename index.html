@@ -208,9 +208,8 @@
 <section id="about">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About the Workshop</h2></div>
-    <p class="lead">Long-term memory is becoming a central capability for modern AI systems. While early language models were largely stateless and limited to a single context window, emerging assistants and agents increasingly store, retrieve, and update information across interactions, users, tasks, and modalities.</p>
-    <p style="margin-top:20px; max-width:820px; color:var(--muted); font-size:16px;">Such memory can enable more personalized assistants, long-horizon reasoning, task continuity, and richer multimodal understanding. At the same time, it raises fundamental questions: what should be remembered, how memories should be represented and retrieved, how systems should handle outdated or conflicting information, and how memory should interact with reasoning, planning, tool use, and user control.</p>
-    <p style="max-width:820px; color:var(--muted); font-size:16px;">PALM brings together researchers studying long-term memory from multiple perspectives — episodic and semantic memory, personalization, multimodal and visual memory, memory for LLM agents, cognitive and neuroscience-inspired models, and safety. The area remains fragmented across NLP, ML, agents, HCI, cognitive science, neuroscience, and AI safety; PALM aims to consolidate these threads, identify shared abstractions and evaluation protocols, and discuss the risks of memory architectures.</p>
+    <p class="lead">Long-term memory is becoming a core component of modern AI systems. Conversational assistants and agentic systems are increasingly expected to retain information across sessions, personalize to users, reason over long horizons, and act consistently across tasks, tools, and modalities. This shift moves AI systems beyond single-context interactions toward persistent memory layers that encode, retrieve, update, and sometimes forget past experience.</p>
+    <p style="margin-top:20px; max-width:820px; color:var(--muted); font-size:16px;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop brings together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
   </div>
 </section>
 
@@ -219,13 +218,13 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">02</span><h2>Topics of Interest</h2></div>
     <div class="grid topics">
-      <div class="card"><span class="tnum">01</span><h3>Memory Architectures for Conversational Agents</h3><p>How should an assistant index, retrieve, read, and update information across sessions? Which abstractions generalize, and where do designs break down as histories grow?</p></div>
-      <div class="card"><span class="tnum">02</span><h3>Memory for LLM &amp; Multi-Agent Systems</h3><p>How should persistent experience, tool-use traces, and shared memory support long-horizon and collaborative tasks? When should memory be propagated, isolated, or provenance-tracked?</p></div>
-      <div class="card"><span class="tnum">03</span><h3>Personalization &amp; Preference Memory</h3><p>Which preferences should be retained, discarded, or updated, and how are conflicts resolved? How can we tailor without over-personalization, sycophancy, or repetition?</p></div>
-      <div class="card"><span class="tnum">04</span><h3>Multimodal, Visual, Video &amp; Embodied Memory</h3><p>How should memory be represented and retrieved across text, image, video, and sensorimotor streams, and evolved across long horizons with cross-modal dependencies?</p></div>
-      <div class="card"><span class="tnum">05</span><h3>Neuroscience-Inspired Memory Models</h3><p>What can complementary learning systems, consolidation, and replay contribute? How should fast episodic encoding balance against slow semantic generalization and forgetting?</p></div>
-      <div class="card"><span class="tnum">06</span><h3>Safety, Privacy &amp; Security of Persistent Memory</h3><p>How can memory be protected against poisoning, injection, and sleeper attacks? How does persistent memory affect behavior over time — sycophancy, belief reinforcement, alignment drift?</p></div>
-      <div class="card"><span class="tnum">07</span><h3>User Control, Transparency &amp; HXAI</h3><p>How can users inspect, edit, and delete memories? What interfaces make memory architectures transparent and controllable?</p></div>
+      <div class="card"><span class="tnum">01</span><h3>Memory Architectures for Conversational Assistants</h3><p>Writing, retrieving, updating, consolidating, and forgetting memories across sessions — memory stores for multi-session dialogue, retrieval policies for user preferences, consolidation from histories, and handling stale or contradictory memories.</p></div>
+      <div class="card"><span class="tnum">02</span><h3>Memory for LLM Agents &amp; Multi-Agent Systems</h3><p>Memory for long-horizon tasks, tool use, collaboration, and coordination — persistent task histories, tool-use traces, shared memory, provenance, isolation, and propagating or restricting memories across agents.</p></div>
+      <div class="card"><span class="tnum">03</span><h3>Multimodal, Visual, Video &amp; Embodied Memory</h3><p>Memory across text, images, video, audio, sensorimotor streams, and robotics — long-term video memory, visual retrieval, spatial memory, multimodal event memory, and memory for AR/VR or robotic assistants.</p></div>
+      <div class="card"><span class="tnum">04</span><h3>Neuroscience-Inspired &amp; Cognitive Memory Models</h3><p>Human- and biology-inspired memory design — complementary learning systems, episodic-to-semantic consolidation, replay, forgetting, abstraction, cognitive maps, and human vs. machine memory limitations.</p></div>
+      <div class="card"><span class="tnum">05</span><h3>Benchmarking &amp; Evaluation</h3><p>Evaluating memory beyond short-context recall — long-horizon benchmarks, temporal reasoning over past events, update and deletion tests, contradiction handling, abstention, and oracle-retrieval comparisons.</p></div>
+      <div class="card"><span class="tnum">06</span><h3>Safety, Privacy &amp; Security</h3><p>Risks of persistent memory and personalization — memory poisoning, prompt injection through stored memories, sleeper memories, privacy and cross-domain leakage, sycophancy, harmful belief reinforcement, and alignment drift.</p></div>
+      <div class="card"><span class="tnum">07</span><h3>User Control &amp; Transparency</h3><p>Understanding and controlling what AI systems remember — interfaces for inspecting, editing, deleting, and scoping memories; consent and access control; provenance; and right-to-be-forgotten mechanisms.</p></div>
     </div>
   </div>
 </section>
@@ -234,20 +233,25 @@
 <section id="cfp">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Call for Papers</h2></div>
-    <p class="lead">PALM welcomes work on long-term memory for AI systems. Accepted papers are <strong>non-archival</strong> — they may be submitted to or published at other venues.</p>
+    <p class="lead">We invite submissions on long-term memory for AI agents, conversational assistants, and personalized AI systems — from machine learning, NLP, AI agents, HCI, cognitive science, neuroscience, privacy, security, and AI safety. Submissions may present new architectures, benchmarks, datasets, evaluations, systems, theoretical perspectives, position papers, negative results, or interdisciplinary analyses.</p>
 
-    <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin-top:26px;">
-      <div class="card"><h3>Format</h3><p>NeurIPS 2026 LaTeX style template, submitted as a PDF via OpenReview.</p></div>
-      <div class="card"><h3>Length</h3><p>Up to 4 pages, excluding references and appendix. <em>(to be confirmed)</em></p></div>
-      <div class="card"><h3>Review</h3><p>Double-blind — please anonymize your submission. <em>(to be confirmed)</em></p></div>
-      <div class="card"><h3>Dual Submission</h3><p>Allowed. As a non-archival workshop, PALM publishes no proceedings.</p></div>
+    <h3 style="margin-top:34px; margin-bottom:6px;">Submission tracks</h3>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); margin-top:14px;">
+      <div class="card"><h3>Full-Length Papers</h3><p>Up to <strong>9 pages</strong>, excluding references and supplementary materials.</p></div>
+      <div class="card"><h3>Short Papers</h3><p>Up to <strong>4 pages</strong>, excluding references and supplementary materials.</p></div>
     </div>
 
-    <h3 style="margin-top:34px; margin-bottom:6px;">We welcome</h3>
-    <p style="color:var(--muted); max-width:820px;">Work in progress &nbsp;·&nbsp; position papers &nbsp;·&nbsp; benchmark proposals &nbsp;·&nbsp; negative results &nbsp;·&nbsp; early empirical studies.</p>
+    <h3 style="margin-top:34px; margin-bottom:6px;">Format &amp; policies</h3>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); margin-top:14px;">
+      <div class="card"><h3>Template</h3><p>Use the <a href="https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip">NeurIPS 2026 template</a>, submitted as a PDF.</p></div>
+      <div class="card"><h3>Non-Archival &amp; Dual Submission</h3><p>Welcomes ongoing and unpublished work, as well as papers under review or recently accepted elsewhere (provided this does not breach the other venue's dual-submission or anonymity policies). Work may be submitted elsewhere concurrently or subsequently.</p></div>
+      <div class="card"><h3>Double-Blind Review</h3><p>Submissions must be fully anonymized, including any supplementary or linked material such as code. Violations may be desk-rejected.</p></div>
+      <div class="card"><h3>Visibility</h3><p>Accepted papers will be made public; rejected submissions and reviews will not.</p></div>
+      <div class="card"><h3>LLM Usage</h3><p>AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</p></div>
+    </div>
 
     <div class="note" style="margin-top:26px;">
-      <strong>Submission opens mid-July 2026 on OpenReview.</strong> The submission link and full instructions will be posted here. All authors will be notified before the mandatory NeurIPS deadline of September 29, 2026.
+      <strong>Submission opens on OpenReview soon.</strong> The submission link will be posted here. All authors will be notified by the mandatory NeurIPS deadline of September 29, 2026.
       <div style="margin-top:16px;"><a class="btn btn-primary" style="background:var(--accent); color:#fff;" href="#cfp">OpenReview — link coming soon</a></div>
     </div>
   </div>
@@ -258,16 +262,12 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">04</span><h2>Important Dates</h2></div>
     <div class="dates">
-      <div class="date-row"><div class="d">July 11, 2026</div><div class="lbl">Workshop acceptance notification</div></div>
-      <div class="date-row"><div class="d">Mid-July 2026</div><div class="lbl">Website, CFP &amp; OpenReview site released</div></div>
-      <div class="date-row hot"><div class="d">August 29, 2026 <span class="pill-soon">Deadline</span></div><div class="lbl">Workshop paper submission deadline</div></div>
-      <div class="date-row"><div class="d">September 2026</div><div class="lbl">Reviewing and organizer discussion</div></div>
-      <div class="date-row"><div class="d">September 25, 2026</div><div class="lbl">Accept / reject notifications sent to authors</div></div>
-      <div class="date-row"><div class="d">October 25, 2026</div><div class="lbl">Camera-ready deadline</div></div>
-      <div class="date-row"><div class="d">October 31, 2026</div><div class="lbl">Final workshop program released</div></div>
-      <div class="date-row"><div class="d">December 2026</div><div class="lbl">Workshop held at NeurIPS 2026, Paris</div></div>
+      <div class="date-row hot"><div class="d">August 24, 2026 <span class="pill-soon">Deadline</span></div><div class="lbl">Workshop paper submission</div></div>
+      <div class="date-row"><div class="d">September 29, 2026</div><div class="lbl">Notification of acceptance</div></div>
+      <div class="date-row"><div class="d">TBD</div><div class="lbl">Camera-ready</div></div>
+      <div class="date-row"><div class="d">December 12–13, 2026</div><div class="lbl">Workshop at NeurIPS 2026, Paris</div></div>
     </div>
-    <p style="color:var(--muted); font-size:13.5px; margin-top:12px;">All deadlines are 23:59 AoE (Anywhere on Earth).</p>
+    <p style="color:var(--muted); font-size:13.5px; margin-top:12px;">All deadlines are 11:59pm AoE (Anywhere on Earth).</p>
   </div>
 </section>
 
@@ -275,21 +275,9 @@
 <section id="schedule">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><h2>Schedule</h2></div>
-    <p class="lead">A full-day 8.5-hour event: five invited talks (30 min + 10 min Q&amp;A), ten contributed talks, two poster sessions, a panel discussion, and a lunch break.</p>
-    <div class="sched" style="margin-top:24px;">
-      <div class="sl"><div class="t">09:00–09:10</div><div class="e">Opening remarks</div></div>
-      <div class="sl"><div class="t">09:10–09:50</div><div class="e"><strong>Invited Talk 1</strong> — Weiwen Liu <small>(Shanghai Jiao Tong University)</small></div></div>
-      <div class="sl"><div class="t">09:50–10:30</div><div class="e"><strong>Invited Talk 2</strong> — Tsendsuren Munkhdalai <small>(Google)</small></div></div>
-      <div class="sl"><div class="t">10:30–11:15</div><div class="e">Poster Session I + coffee break</div></div>
-      <div class="sl"><div class="t">11:15–12:05</div><div class="e">Contributed Talks I</div></div>
-      <div class="sl"><div class="t">12:05–13:05</div><div class="e">Lunch break</div></div>
-      <div class="sl"><div class="t">13:05–13:45</div><div class="e"><strong>Invited Talk 3</strong> — Niloofar Mireshghallah <small>(CMU / humans&amp;)</small></div></div>
-      <div class="sl"><div class="t">13:45–14:35</div><div class="e">Contributed Talks II</div></div>
-      <div class="sl"><div class="t">14:35–15:15</div><div class="e"><strong>Invited Talk 4</strong> — Ali Behrouz <small>(Cornell University)</small></div></div>
-      <div class="sl"><div class="t">15:15–16:00</div><div class="e">Poster Session II + coffee break</div></div>
-      <div class="sl"><div class="t">16:00–16:40</div><div class="e"><strong>Invited Talk 5</strong> — Mariya Toneva <small>(MPI-SWS)</small></div></div>
-      <div class="sl"><div class="t">16:40–17:20</div><div class="e">Panel discussion</div></div>
-      <div class="sl"><div class="t">17:20–17:30</div><div class="e">Best paper awards &amp; closing remarks</div></div>
+    <p class="lead">A full-day event with invited talks, contributed talks, poster sessions, and a panel discussion. The detailed program will be announced closer to the workshop.</p>
+    <div class="note" style="margin-top:24px;">
+      <strong>Schedule — TBD.</strong> The full program will be posted here once finalized.
     </div>
   </div>
 </section>
@@ -298,12 +286,13 @@
 <section id="speakers" class="alt">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">06</span><h2>Invited Speakers</h2></div>
+    <p style="color:var(--muted); font-size:15px; margin:0 0 22px;">Speakers are announced on a rolling basis — stay tuned as we reveal our lineup.</p>
     <div class="grid people" style="margin-top:8px;">
-      <div class="person"><div class="avatar" role="img" aria-label="Weiwen Liu"></div><div class="nm">Weiwen Liu</div><div class="af">Shanghai Jiao Tong University</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Tsendsuren Munkhdalai"></div><div class="nm">Tsendsuren Munkhdalai</div><div class="af">Google</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Niloofar Mireshghallah"></div><div class="nm">Niloofar Mireshghallah</div><div class="af">CMU / humans&amp;</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Ali Behrouz"></div><div class="nm">Ali Behrouz</div><div class="af">Cornell University</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Mariya Toneva"></div><div class="nm">Mariya Toneva</div><div class="af">MPI-SWS</div></div>
+      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
+      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
+      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
+      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
+      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
     </div>
 
     <div class="sec-head" style="margin-top:52px; margin-bottom:8px;"><h2 style="font-size:22px;">Panelists</h2></div>

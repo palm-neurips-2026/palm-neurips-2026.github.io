@@ -33,8 +33,11 @@ The hero currently falls back to a live Unsplash Paris photo. For reliability, d
 
 ### 3. Placeholders to confirm / replace before launch
 - **Contact email** — `CONTACT@EXAMPLE.COM` in the footer of `index.html`.
-- **OpenReview link** — the CFP "OpenReview — link coming soon" button and the "Submit a Paper" hero button point to `#cfp`; swap in the real OpenReview URL once the site is live (mid-July 2026).
-- **CFP details not fixed in the proposal** — marked *(to be confirmed)* in the Call for Papers section: **page length** (placeholder: 4 pages) and **review model** (placeholder: double-blind). Confirm with the organizers and update.
+- **OpenReview link** — the CFP "OpenReview — link coming soon" button and the "Submit a Paper" hero button point to `#cfp`; swap in the real OpenReview URL once the group is created.
+- **Invited speakers** — currently shown as 5 "TBA" cards (announced on a rolling basis). Replace each `TBA` card with a name/affiliation as speakers are revealed; add a photo via `images/speakers/`.
+- **Schedule** — marked TBD; drop in the timetable once finalized.
+- **Camera-ready date** — TBD in Important Dates.
+- **Workshop date** — currently "December 12–13, 2026" per the website-text doc. (Note: an organizer email mentioned Dec 11–12 — confirm the exact day.)
 
 ## Notes
 - Design intentionally diverges from the SCALE @ ICML reference (Paris night-blue palette, custom hero, numbered topic cards) while keeping the familiar sticky-nav + numbered-section structure.
