@@ -151,6 +151,12 @@
   .note { background:#eef2ff; border:1px solid #dbe2ff; border-radius: var(--radius); padding: 22px; color:#28315a; }
   .note strong { color: var(--accent); }
 
+  /* policy bullet list */
+  .policy { margin: 14px 0 0; padding-left: 20px; max-width: 860px; }
+  .policy li { margin-bottom: 12px; color: var(--muted); font-size: 15.5px; }
+  .policy li::marker { color: var(--accent-2); }
+  .policy li strong { color: var(--ink); }
+
   /* FOOTER */
   footer { padding: 46px 0; background: #0e1220; color: #c7cbd6; }
   footer .wrap { display:flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
@@ -242,13 +248,13 @@
     </div>
 
     <h3 style="margin-top:34px; margin-bottom:6px;">Format &amp; policies</h3>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); margin-top:14px;">
-      <div class="card"><h3>Template</h3><p>Use the <a href="https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip">NeurIPS 2026 template</a>, submitted as a PDF.</p></div>
-      <div class="card"><h3>Non-Archival &amp; Dual Submission</h3><p>Welcomes ongoing and unpublished work, as well as papers under review or recently accepted elsewhere (provided this does not breach the other venue's dual-submission or anonymity policies). Work may be submitted elsewhere concurrently or subsequently.</p></div>
-      <div class="card"><h3>Double-Blind Review</h3><p>Submissions must be fully anonymized, including any supplementary or linked material such as code. Violations may be desk-rejected.</p></div>
-      <div class="card"><h3>Visibility</h3><p>Accepted papers will be made public; rejected submissions and reviews will not.</p></div>
-      <div class="card"><h3>LLM Usage</h3><p>AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</p></div>
-    </div>
+    <ul class="policy">
+      <li><strong>Template.</strong> Use the <a href="https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip">NeurIPS 2026 template</a>, submitted as a PDF.</li>
+      <li><strong>Non-archival &amp; dual submission.</strong> Welcomes ongoing and unpublished work, as well as papers under review or recently accepted elsewhere (provided this does not breach the other venue's dual-submission or anonymity policies). Work may be submitted elsewhere concurrently or subsequently.</li>
+      <li><strong>Double-blind review.</strong> Submissions must be fully anonymized, including any supplementary or linked material such as code. Violations may be desk-rejected.</li>
+      <li><strong>Visibility.</strong> Accepted papers will be made public; rejected submissions and reviews will not.</li>
+      <li><strong>LLM usage.</strong> AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</li>
+    </ul>
 
     <div class="note" style="margin-top:26px;">
       <strong>Submission opens on OpenReview soon.</strong> The submission link will be posted here. All authors will be notified by the mandatory NeurIPS deadline of September 29, 2026.
