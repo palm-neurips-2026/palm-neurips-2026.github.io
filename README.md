@@ -32,8 +32,7 @@ Square images (~400×400) work best.
 The hero currently falls back to a live Unsplash Paris photo. For reliability, download a Paris image and save it as **`images/paris-hero.jpg`** — it will be used automatically (referenced first in the CSS).
 
 ### 3. Placeholders to confirm / replace before launch
-- **Contact email** — `CONTACT@EXAMPLE.COM` in the footer of `index.html`.
-- **OpenReview link** — the CFP "OpenReview — link coming soon" button and the "Submit a Paper" hero button point to `#cfp`; swap in the real OpenReview URL once the group is created.
+- **OpenReview link** — the CFP "OpenReview — link coming soon" button and the "Submit a Paper" hero button point to `#cfp`; swap in the real OpenReview URL once the group is created (coordinating with NeurIPS workshop chairs).
 - **Invited speakers** — currently shown as 5 "TBA" cards (announced on a rolling basis). Replace each `TBA` card with a name/affiliation as speakers are revealed; add a photo via `images/speakers/`.
 - **Schedule** — marked TBD; drop in the timetable once finalized.
 - **Camera-ready date** — TBD in Important Dates.
