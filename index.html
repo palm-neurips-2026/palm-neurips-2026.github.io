@@ -70,7 +70,9 @@
     font-size: 12px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28);
     padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
   }
-  header.hero h1 { font-size: clamp(30px, 5.4vw, 62px); margin: 0 0 12px; letter-spacing: -0.025em; line-height: 1.08; }
+  header.hero h1 { font-size: clamp(26px, 4vw, 44px); margin: 0 0 12px; letter-spacing: -0.02em; line-height: 1.14; }
+  header.hero h1 .l1 { white-space: nowrap; }
+  @media (max-width: 640px) { header.hero h1 .l1 { white-space: normal; } }
   .hero-acr { color: #ffd8a8; }
   .hero-tag { font-size: clamp(16px, 2.2vw, 21px); font-weight: 500; max-width: 760px; opacity: 0.95; }
   .hero-meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 14px 26px; font-weight: 500; font-size: 15px; }
@@ -214,7 +216,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About the Workshop</h2></div>
     <p class="lead">Long-term memory is becoming a core component of modern AI systems. Conversational assistants and agentic systems are increasingly expected to retain information across sessions, personalize to users, reason over long horizons, and act consistently across tasks, tools, and modalities. This shift moves AI systems beyond single-context interactions toward persistent memory layers that encode, retrieve, update, and sometimes forget past experience.</p>
-    <p style="margin-top:20px; color:var(--muted); font-size:17px; text-align:justify;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop brings together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
+    <p style="margin-top:20px; color:var(--muted); font-size:17px; text-align:justify;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop will bring together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
   </div>
 </section>
 
@@ -239,27 +241,24 @@
 <section id="cfp">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Call for Papers</h2></div>
-    <p class="lead">We invite submissions on long-term memory for AI agents, conversational assistants, and personalized AI systems — from machine learning, NLP, AI agents, HCI, cognitive science, neuroscience, privacy, security, and AI safety. Submissions may present new architectures, benchmarks, datasets, evaluations, systems, theoretical perspectives, position papers, negative results, or interdisciplinary analyses.</p>
+    <p class="lead">We invite submissions on long-term memory for AI agents, conversational assistants, and personalized AI systems. We welcome work from machine learning, NLP, AI agents, HCI, cognitive science, neuroscience, privacy, security, and AI safety. Submissions may present new architectures, benchmarks, datasets, evaluations, systems, theoretical perspectives, position papers, negative results, or interdisciplinary analyses.</p>
 
-    <h3 style="margin-top:34px; margin-bottom:6px;">Submission tracks</h3>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); margin-top:14px;">
-      <div class="card"><h3>Full-Length Papers</h3><p>Up to <strong>9 pages</strong>, excluding references and supplementary materials.</p></div>
-      <div class="card"><h3>Short Papers</h3><p>Up to <strong>4 pages</strong>, excluding references and supplementary materials.</p></div>
-    </div>
-
-    <h3 style="margin-top:34px; margin-bottom:6px;">Format &amp; policies</h3>
+    <h3 style="margin-top:34px; margin-bottom:8px; font-size:20px;">Submission tracks</h3>
     <ul class="policy">
-      <li><strong>Template.</strong> Use the <a href="https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip">NeurIPS 2026 template</a>, submitted as a PDF.</li>
-      <li><strong>Non-archival &amp; dual submission.</strong> Welcomes ongoing and unpublished work, as well as papers under review or recently accepted elsewhere (provided this does not breach the other venue's dual-submission or anonymity policies). Work may be submitted elsewhere concurrently or subsequently.</li>
-      <li><strong>Double-blind review.</strong> Submissions must be fully anonymized, including any supplementary or linked material such as code. Violations may be desk-rejected.</li>
-      <li><strong>Visibility.</strong> Accepted papers will be made public; rejected submissions and reviews will not.</li>
-      <li><strong>LLM usage.</strong> AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</li>
+      <li><strong>Full-Length Papers:</strong> Up to 9 pages (excluding references and supplementary materials).</li>
+      <li><strong>Short Papers:</strong> Up to 4 pages (excluding references and supplementary materials).</li>
     </ul>
 
-    <div class="note" style="margin-top:26px;">
-      <strong>Submission opens on OpenReview soon.</strong> The submission link will be posted here. All authors will be notified by the mandatory NeurIPS deadline of September 29, 2026.
-      <div style="margin-top:16px;"><a class="btn btn-primary" style="background:var(--accent); color:#fff;" href="#cfp">OpenReview — link coming soon</a></div>
-    </div>
+    <h3 style="margin-top:34px; margin-bottom:8px; font-size:20px;">Format &amp; policies</h3>
+    <ul class="policy">
+      <li><strong>Style files and templates:</strong> To prepare your submission to PALM Workshop 2026, please use the <a href="https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip">NeurIPS 2026 template</a>.</li>
+      <li><strong>Dual-submission policy:</strong> The workshop will adopt a non-archival policy, welcoming ongoing and unpublished work, as well as papers under review or recently accepted at other venues (provided they do not breach dual-submission or anonymity policies of the other venue). Workshop submissions can be subsequently or concurrently submitted to other venues.</li>
+      <li><strong>Visibility:</strong> Accepted papers will be made public, but rejected submissions and reviews will not.</li>
+      <li><strong>Double-blind reviewing:</strong> Submissions must be fully anonymized. This policy applies to any supplementary or linked material as well, including code. Any papers found to be in violation of this policy may be desk-rejected.</li>
+      <li><strong>LLM usage policy:</strong> AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</li>
+    </ul>
+
+    <div style="margin-top:30px;"><a class="btn btn-primary" style="background:var(--accent); color:#fff;" href="https://openreview.net/">Submit on OpenReview</a></div>
   </div>
 </section>
 
@@ -292,7 +291,6 @@
 <section id="speakers" class="alt">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">06</span><h2>Invited Speakers</h2></div>
-    <p style="color:var(--muted); font-size:15px; margin:0 0 22px;">Speakers are announced on a rolling basis — stay tuned as we reveal our lineup.</p>
     <div class="grid people" style="margin-top:8px;">
       <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
       <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
@@ -315,14 +313,14 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">07</span><h2>Organizers</h2></div>
     <div class="grid people" style="margin-top:26px;">
-      <div class="person"><div class="avatar" role="img" aria-label="Mario Fritz"></div><div class="nm">Mario Fritz</div><div class="af">CISPA Helmholtz Center</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Seong Joon Oh"></div><div class="nm">Seong Joon Oh</div><div class="af">KAIST</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Sahar Abdelnabi"></div><div class="nm">Sahar Abdelnabi</div><div class="af">ELLIS Institute Tübingen &amp; MPI-IS</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Shawn Shen"></div><div class="nm">Shawn Shen</div><div class="af">Memories.ai &amp; Univ. of Bristol</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Hugo D. Lopes"></div><div class="nm">Hugo D. Lopes</div><div class="af">Google DeepMind</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Haritz Puerto"></div><div class="nm">Haritz Puerto</div><div class="af">ELLIS Institute Tübingen &amp; MPI-IS</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Ivaxi Sheth"></div><div class="nm">Ivaxi Sheth</div><div class="af">CISPA Helmholtz Center</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="Seokwon Jung"></div><div class="nm">Seokwon Jung</div><div class="af">KAIST</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/mario-fritz.jpg" alt="Mario Fritz" loading="lazy" /><div class="nm">Mario Fritz</div><div class="af">CISPA Helmholtz Center</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/seong-joon-oh.jpg" alt="Seong Joon Oh" loading="lazy" /><div class="nm">Seong Joon Oh</div><div class="af">KAIST</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/sahar-abdelnabi.jpg" alt="Sahar Abdelnabi" loading="lazy" /><div class="nm">Sahar Abdelnabi</div><div class="af">ELLIS Institute Tübingen &amp; MPI-IS</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/shawn-shen.jpg" alt="Shawn Shen" loading="lazy" /><div class="nm">Shawn Shen</div><div class="af">Memories.ai &amp; Univ. of Bristol</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/hugo-lopes.jpg" alt="Hugo D. Lopes" loading="lazy" /><div class="nm">Hugo D. Lopes</div><div class="af">Google DeepMind</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/haritz-puerto.jpg" alt="Haritz Puerto" loading="lazy" /><div class="nm">Haritz Puerto</div><div class="af">ELLIS Institute Tübingen &amp; MPI-IS</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/ivaxi-sheth.jpg" alt="Ivaxi Sheth" loading="lazy" /><div class="nm">Ivaxi Sheth</div><div class="af">CISPA Helmholtz Center</div></div>
+      <div class="person"><img class="avatar" src="images/organizers/seokwon-jung.jpg" alt="Seokwon Jung" loading="lazy" /><div class="nm">Seokwon Jung</div><div class="af">KAIST</div></div>
     </div>
   </div>
 </section>
@@ -341,6 +339,16 @@
 </footer>
 
 <script>
+  // If a photo is missing, fall back to the silhouette avatar.
+  document.querySelectorAll("img.avatar").forEach(function (img) {
+    img.addEventListener("error", function () {
+      var d = document.createElement("div");
+      d.className = "avatar";
+      d.setAttribute("role", "img");
+      d.setAttribute("aria-label", img.getAttribute("alt") || "");
+      img.replaceWith(d);
+    });
+  });
   // Close mobile menu on link click
   document.querySelectorAll("#navlinks a").forEach(function (a) {
     a.addEventListener("click", function () { document.getElementById("navlinks").classList.remove("open"); });
