@@ -17,7 +17,7 @@
     --soft: #f6f7f9;
     --accent: #1e3a8a;      /* Paris night blue */
     --accent-2: #c2410c;    /* warm accent */
-    --maxw: 1080px;
+    --maxw: 1160px;
     --radius: 16px;
   }
   * { box-sizing: border-box; }
@@ -64,7 +64,7 @@
       url("images/paris-hero.jpg") center 40% / cover no-repeat,
       url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80") center 40% / cover no-repeat;
   }
-  .hero-inner { max-width: 1320px; margin: 0 auto; padding: clamp(72px,10vh,120px) clamp(22px,4vw,56px); width: 100%; }
+  .hero-inner { max-width: var(--maxw); margin: 0 auto; padding: clamp(72px,10vh,120px) 24px; width: 100%; }
   .kicker {
     display: inline-block; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
     font-size: 12px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28);
@@ -91,7 +91,7 @@
   .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
   .sec-num { font-family: "Space Grotesk"; font-weight: 700; color: var(--accent); font-size: 15px; letter-spacing: 0.08em; }
   .sec-head h2 { font-size: clamp(24px, 3.4vw, 34px); margin: 0; letter-spacing: -0.02em; }
-  .lead { font-size: 17px; color: var(--muted); max-width: 820px; }
+  .lead { font-size: 18.5px; color: var(--muted); text-align: justify; }
   p { margin: 0 0 16px; }
 
   /* TOPICS grid */
@@ -104,7 +104,7 @@
   section.alt .card { background: #fff; }
   .card:hover { box-shadow: 0 8px 30px rgba(20,30,60,0.08); transform: translateY(-2px); }
   .card h3 { font-size: 17px; margin: 0 0 8px; }
-  .card p { font-size: 14.5px; color: var(--muted); margin: 0; }
+  .card p { font-size: 15.5px; color: var(--muted); margin: 0; }
   .card .tnum { color: var(--accent-2); font-weight: 700; font-size: 13px; }
 
   /* DATES */
@@ -133,6 +133,7 @@
   .avatar {
     width: 118px; height: 118px; border-radius: 50%; margin: 0 auto 14px;
     border: 3px solid #fff; box-shadow: 0 4px 18px rgba(20,30,60,0.12);
+    object-fit: cover; object-position: center top;
     background: #e7ebf2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' fill='%23e7ebf2'/%3E%3Ccircle cx='64' cy='49' r='23' fill='%23aab3c2'/%3E%3Cpath d='M64 79c-24 0-41 16-44 40h88c-3-24-20-40-44-40z' fill='%23aab3c2'/%3E%3C/svg%3E") center/cover no-repeat;
   }
   .person .nm { font-weight: 600; font-size: 15.5px; }
@@ -150,8 +151,8 @@
   .note strong { color: var(--accent); }
 
   /* policy bullet list */
-  .policy { margin: 14px 0 0; padding-left: 20px; max-width: 860px; }
-  .policy li { margin-bottom: 12px; color: var(--muted); font-size: 15.5px; }
+  .policy { margin: 14px 0 0; padding-left: 20px; }
+  .policy li { margin-bottom: 12px; color: var(--muted); font-size: 16.5px; }
   .policy li::marker { color: var(--accent-2); }
   .policy li strong { color: var(--ink); }
 
@@ -213,7 +214,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About the Workshop</h2></div>
     <p class="lead">Long-term memory is becoming a core component of modern AI systems. Conversational assistants and agentic systems are increasingly expected to retain information across sessions, personalize to users, reason over long horizons, and act consistently across tasks, tools, and modalities. This shift moves AI systems beyond single-context interactions toward persistent memory layers that encode, retrieve, update, and sometimes forget past experience.</p>
-    <p style="margin-top:20px; max-width:820px; color:var(--muted); font-size:16px;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop brings together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
+    <p style="margin-top:20px; color:var(--muted); font-size:17px; text-align:justify;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop brings together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
   </div>
 </section>
 
@@ -221,14 +222,15 @@
 <section id="topics" class="alt">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">02</span><h2>Topics of Interest</h2></div>
+    <p class="lead" style="margin-bottom:26px;">Topics of interest include, but are not limited to:</p>
     <div class="grid topics">
-      <div class="card"><span class="tnum">01</span><h3>Memory Architectures for Conversational Assistants</h3><p>Writing, retrieving, updating, consolidating, and forgetting memories across sessions — memory stores for multi-session dialogue, retrieval policies for user preferences, consolidation from histories, and handling stale or contradictory memories.</p></div>
-      <div class="card"><span class="tnum">02</span><h3>Memory for LLM Agents &amp; Multi-Agent Systems</h3><p>Memory for long-horizon tasks, tool use, collaboration, and coordination — persistent task histories, tool-use traces, shared memory, provenance, isolation, and propagating or restricting memories across agents.</p></div>
-      <div class="card"><span class="tnum">03</span><h3>Multimodal, Visual, Video &amp; Embodied Memory</h3><p>Memory across text, images, video, audio, sensorimotor streams, and robotics — long-term video memory, visual retrieval, spatial memory, multimodal event memory, and memory for AR/VR or robotic assistants.</p></div>
-      <div class="card"><span class="tnum">04</span><h3>Neuroscience-Inspired &amp; Cognitive Memory Models</h3><p>Human- and biology-inspired memory design — complementary learning systems, episodic-to-semantic consolidation, replay, forgetting, abstraction, cognitive maps, and human vs. machine memory limitations.</p></div>
-      <div class="card"><span class="tnum">05</span><h3>Benchmarking &amp; Evaluation</h3><p>Evaluating memory beyond short-context recall — long-horizon benchmarks, temporal reasoning over past events, update and deletion tests, contradiction handling, abstention, and oracle-retrieval comparisons.</p></div>
-      <div class="card"><span class="tnum">06</span><h3>Safety, Privacy &amp; Security</h3><p>Risks of persistent memory and personalization — memory poisoning, prompt injection through stored memories, sleeper memories, privacy and cross-domain leakage, sycophancy, harmful belief reinforcement, and alignment drift.</p></div>
-      <div class="card"><span class="tnum">07</span><h3>User Control &amp; Transparency</h3><p>Understanding and controlling what AI systems remember — interfaces for inspecting, editing, deleting, and scoping memories; consent and access control; provenance; and right-to-be-forgotten mechanisms.</p></div>
+      <div class="card"><span class="tnum">01</span><h3>Memory Architectures for Conversational Assistants</h3><p>We welcome work on how conversational assistants should write, retrieve, update, consolidate, and forget memories across sessions. Example topics include memory stores for multi-session dialogue, retrieval policies for user preferences, memory consolidation from conversation histories, and mechanisms for handling stale or contradictory memories.</p></div>
+      <div class="card"><span class="tnum">02</span><h3>Memory for LLM Agents &amp; Multi-Agent Systems</h3><p>We invite work on how agents use memory to support long-horizon tasks, tool use, collaboration, and coordination. Example topics include persistent task histories, tool-use traces, shared memory across agents, memory provenance, memory isolation between agents, and mechanisms for propagating or restricting memories in multi-agent systems.</p></div>
+      <div class="card"><span class="tnum">03</span><h3>Multimodal, Visual, Video &amp; Embodied Memory</h3><p>We encourage submissions on memory systems that operate across text, images, video, audio, sensorimotor streams, robotics, and embodied environments. Example topics include long-term video memory, visual retrieval for agents, spatial memory for embodied systems, multimodal event memory, and memory for AR/VR or robotic assistants.</p></div>
+      <div class="card"><span class="tnum">04</span><h3>Neuroscience-Inspired &amp; Cognitive Memory Models</h3><p>We welcome work that draws inspiration from human and biological memory systems to inform AI memory design. Example topics include complementary learning systems, episodic-to-semantic consolidation, replay, forgetting, abstraction, cognitive maps, and comparisons between human and machine memory limitations or biases.</p></div>
+      <div class="card"><span class="tnum">05</span><h3>Benchmarking &amp; Evaluation</h3><p>We invite work on how to evaluate long-term memory systems beyond short-context recall. Example topics include long-horizon memory benchmarks, temporal reasoning over past events, memory update and deletion tests, contradiction handling, abstention under uncertainty, oracle-retrieval comparisons, and evaluations of real-world memory competence.</p></div>
+      <div class="card"><span class="tnum">06</span><h3>Safety, Privacy &amp; Security</h3><p>We encourage work on the risks introduced by persistent memory and memory-enabled personalization. Example topics include memory poisoning, prompt injection through stored memories, sleeper memories, privacy leakage, cross-domain leakage, sycophancy, harmful belief reinforcement, long-term manipulation, and alignment drift.</p></div>
+      <div class="card"><span class="tnum">07</span><h3>User Control &amp; Transparency</h3><p>We welcome work on how users can understand and control what AI systems remember. Example topics include interfaces for inspecting, editing, deleting, and scoping memories; consent and access-control mechanisms; memory provenance; right-to-be-forgotten mechanisms; and human-centered evaluations of memory transparency.</p></div>
     </div>
   </div>
 </section>
@@ -269,7 +271,7 @@
       <div class="date-row hot"><div class="d">August 24, 2026 <span class="pill-soon">Deadline</span></div><div class="lbl">Workshop paper submission</div></div>
       <div class="date-row"><div class="d">September 29, 2026</div><div class="lbl">Notification of acceptance</div></div>
       <div class="date-row"><div class="d">TBD</div><div class="lbl">Camera-ready</div></div>
-      <div class="date-row"><div class="d">December 11 or 12, 2026</div><div class="lbl">Workshop at NeurIPS 2026, Paris (Fri–Sat; exact day TBA)</div></div>
+      <div class="date-row"><div class="d">December 11 or 12, 2026</div><div class="lbl">Workshop at NeurIPS 2026, Paris (exact day TBA)</div></div>
     </div>
     <p style="color:var(--muted); font-size:13.5px; margin-top:12px;">All deadlines are 11:59pm AoE (Anywhere on Earth).</p>
   </div>
