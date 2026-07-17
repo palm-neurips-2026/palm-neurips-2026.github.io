@@ -11,18 +11,20 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --ink: #14161c;
-    --muted: #5b6270;
-    --line: #e6e8ee;
+    --forest: #103d2c;
+    --ink: #26332c;
+    --muted: #5c6b62;
+    --line: #d8e8e0;
     --bg: #ffffff;
-    --soft: #f6f7f9;
-    --accent: #1e3a8a;      /* Paris night blue */
-    --accent-2: #c2410c;    /* warm accent */
+    --soft: #f3faf6;
+    --accent: #0e8a72;      /* PALM logo teal */
+    --accent-2: #b9791b;    /* golden deep (numbers, dates, markers) */
+    --amber: #f4a83d;       /* logo amber highlight */
     --maxw: 1160px;
-    --radius: 16px;
+    --radius: 18px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -34,7 +36,7 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; line-height: 1.2; }
+  h1, h2, h3, h4 { font-family: "Fraunces", serif; line-height: 1.15; color: var(--forest); }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
@@ -50,7 +52,8 @@
     max-width: var(--maxw); margin: 0 auto; padding: 12px 24px;
     display: flex; align-items: center; justify-content: space-between; gap: 16px;
   }
-  .brand { font-family: "Space Grotesk"; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: "Fraunces", serif; font-weight: 600; font-size: 20px; color: var(--forest); }
+  .brand img { width: 30px; height: 30px; object-fit: contain; }
   .brand span { color: var(--accent); }
   .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
   .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
@@ -62,22 +65,25 @@
     position: relative;
     min-height: 78vh;
     display: flex; align-items: center;
-    color: #fff;
+    color: var(--forest);
+    border-bottom: 1px solid var(--line);
     background:
-      linear-gradient(180deg, rgba(10,14,30,0.55), rgba(10,14,30,0.78)),
-      url("images/paris-hero.jpg") center 40% / cover no-repeat,
-      url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80") center 40% / cover no-repeat;
+      linear-gradient(180deg, rgba(243,250,246,0.93) 0%, rgba(237,248,243,0.66) 40%, rgba(233,247,240,0.42) 72%, rgba(233,247,240,0.60) 100%),
+      url("images/paris-eiffel.jpg") center 20% / cover no-repeat;
   }
   .hero-inner { max-width: var(--maxw); margin: 0 auto; padding: clamp(72px,10vh,120px) 24px; width: 100%; }
   .kicker {
     display: inline-block; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-    font-size: 12px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28);
+    font-size: 12px; color: var(--accent); background: rgba(14,138,114,0.10); border: 1px solid rgba(14,138,114,0.30);
     padding: 6px 12px; border-radius: 999px; margin-bottom: 20px;
   }
-  header.hero h1 { font-size: clamp(26px, 4vw, 44px); margin: 0 0 12px; letter-spacing: -0.02em; line-height: 1.14; }
-  header.hero h1 .l1 { white-space: nowrap; }
-  @media (max-width: 640px) { header.hero h1 .l1 { white-space: normal; } }
-  .hero-acr { color: #ffd8a8; }
+  .hero-lockup { display: flex; align-items: center; gap: clamp(20px,3vw,40px); }
+  .hero-logo { width: clamp(88px,11vw,132px); height: auto; flex-shrink: 0; filter: drop-shadow(0 6px 16px rgba(16,61,44,0.16)); }
+  .hero-wordmark { font-family: "Fraunces", serif; font-weight: 600; color: var(--forest); font-size: clamp(54px,9vw,104px); line-height: 0.92; letter-spacing: 0.01em; margin: 0; }
+  .hero-sub { font-family: "Fraunces", serif; font-weight: 500; color: var(--accent); font-size: clamp(18px,2.4vw,27px); line-height: 1.22; margin: 10px 0 0; }
+  .hero-eventline { font-size: clamp(14px,1.5vw,16px); color: var(--muted); font-weight: 500; margin: 10px 0 0; }
+  @media (max-width: 640px) { .hero-lockup { flex-direction: column; align-items: flex-start; gap: 16px; } }
+  .hero-acr { color: var(--amber); }
   .hero-tag { font-size: clamp(16px, 2.2vw, 21px); font-weight: 500; max-width: 760px; opacity: 0.95; }
   .hero-meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 14px 26px; font-weight: 500; font-size: 15px; }
   .hero-meta div { display: flex; align-items: center; gap: 8px; }
@@ -86,17 +92,17 @@
     padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: 15px;
     display: inline-flex; align-items: center; gap: 8px;
   }
-  .btn-primary { background: #fff; color: var(--accent); }
-  .btn-primary:hover { text-decoration: none; transform: translateY(-1px); }
-  .btn-ghost { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
-  .btn-ghost:hover { text-decoration: none; background: rgba(255,255,255,0.16); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { text-decoration: none; transform: translateY(-1px); background: #0a6b57; }
+  .btn-ghost { background: rgba(255,255,255,0.72); color: var(--forest); border: 1px solid var(--line); }
+  .btn-ghost:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
 
   /* SECTIONS */
   section { padding: 74px 0; border-bottom: 1px solid var(--line); }
   section.alt { background: var(--soft); }
   .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
-  .sec-num { font-family: "Space Grotesk"; font-weight: 700; color: var(--accent); font-size: 15px; letter-spacing: 0.08em; }
-  .sec-head h2 { font-size: clamp(24px, 3.4vw, 34px); margin: 0; letter-spacing: -0.02em; }
+  .sec-num { font-family: "Inter", sans-serif; font-weight: 700; color: var(--accent); font-size: 14px; letter-spacing: 0.1em; }
+  .sec-head h2 { font-size: clamp(26px, 3.6vw, 38px); margin: 0; letter-spacing: -0.01em; color: var(--forest); }
   .lead { font-size: 18.5px; color: var(--muted); text-align: justify; }
   p { margin: 0 0 16px; }
 
@@ -109,7 +115,7 @@
   }
   section.alt .card { background: #fff; }
   .card:hover { box-shadow: 0 8px 30px rgba(20,30,60,0.08); transform: translateY(-2px); }
-  .card h3 { font-size: 17px; margin: 0 0 8px; }
+  .card h3 { font-size: 20px; margin: 0 0 10px; color: var(--forest); }
   .card p { font-size: 15.5px; color: var(--muted); margin: 0; }
   .card .tnum { color: var(--accent-2); font-weight: 700; font-size: 13px; }
 
@@ -117,11 +123,11 @@
   .dates { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background:#fff; }
   .date-row { display: grid; grid-template-columns: 220px 1fr; gap: 16px; padding: 15px 22px; border-top: 1px solid var(--line); align-items: center; }
   .date-row:first-child { border-top: 0; }
-  .date-row .d { font-weight: 700; font-family: "Space Grotesk"; }
-  .date-row.hot { background: #fff7ed; }
+  .date-row .d { font-weight: 600; font-family: "Fraunces", serif; font-size: 18px; color: var(--forest); }
+  .date-row.hot { background: #fdf5e8; }
   .date-row.hot .d { color: var(--accent-2); }
   .date-row .lbl { color: var(--muted); font-size: 15px; }
-  .pill-soon { font-size: 11px; font-weight: 700; color:#fff; background: var(--accent-2); padding: 2px 9px; border-radius: 999px; margin-left: 8px; }
+  .pill-soon { font-size: 11px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--forest); background: var(--amber); padding: 3px 10px; border-radius: 999px; margin-left: 10px; }
 
   /* SCHEDULE */
   .sched { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background:#fff; }
@@ -140,9 +146,9 @@
     width: 118px; height: 118px; border-radius: 50%; margin: 0 auto 14px;
     border: 3px solid #fff; box-shadow: 0 4px 18px rgba(20,30,60,0.12);
     object-fit: cover; object-position: center top;
-    background: #e7ebf2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' fill='%23e7ebf2'/%3E%3Ccircle cx='64' cy='49' r='23' fill='%23aab3c2'/%3E%3Cpath d='M64 79c-24 0-41 16-44 40h88c-3-24-20-40-44-40z' fill='%23aab3c2'/%3E%3C/svg%3E") center/cover no-repeat;
+    background: #e7f2ec url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' fill='%23e7f2ec'/%3E%3Ccircle cx='64' cy='49' r='23' fill='%23a7c6ba'/%3E%3Cpath d='M64 79c-24 0-41 16-44 40h88c-3-24-20-40-44-40z' fill='%23a7c6ba'/%3E%3C/svg%3E") center/cover no-repeat;
   }
-  .person .nm { font-weight: 600; font-size: 15.5px; }
+  .person .nm { font-family: "Fraunces", serif; font-weight: 600; font-size: 16.5px; color: var(--forest); }
   .person .af { color: var(--muted); font-size: 13.5px; }
   .person .role { display:inline-block; margin-top:6px; font-size:11.5px; color: var(--accent-2); font-weight:600; }
 
@@ -160,13 +166,13 @@
   .policy { margin: 14px 0 0; padding-left: 20px; }
   .policy li { margin-bottom: 12px; color: var(--muted); font-size: 16.5px; }
   .policy li::marker { color: var(--accent-2); }
-  .policy li strong { color: var(--ink); }
+  .policy li strong { color: var(--forest); }
 
   /* FOOTER */
-  footer { padding: 46px 0; background: #0e1220; color: #c7cbd6; }
+  footer { padding: 52px 0; background: var(--forest); color: #cfe3d8; }
   footer .wrap { display:flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
-  footer a { color: #a9c0ff; }
-  footer .fbrand { font-family:"Space Grotesk"; font-weight:700; color:#fff; font-size: 18px; }
+  footer a { color: var(--amber); }
+  footer .fbrand { font-family:"Fraunces", serif; font-weight:600; color:#fff; font-size: 20px; }
 
   @media (max-width: 760px) {
     .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background:#fff; flex-direction: column; padding: 12px 24px; border-bottom: 1px solid var(--line); }
@@ -182,7 +188,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="brand">PALM<span> ·</span> NeurIPS 2026</div>
+    <div class="brand"><img src="images/palm-icon.png" alt="" />PALM<span> ·</span> NeurIPS 2026</div>
     <button class="nav-toggle" aria-label="menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
     <div class="nav-links" id="navlinks">
       <a href="#about">About</a>
@@ -199,16 +205,15 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
-    <span class="kicker">NeurIPS 2026 Workshop · Paris</span>
-    <h1><span class="l1">Personalized, Aligned, Long-Term Memory</span><br><span class="hero-acr">(PALM)</span> for AI Systems</h1>
-    <p class="hero-tag">Building safe and personalized long-term memory for AI agents &amp; conversational assistants.</p>
-    <div class="hero-meta">
-      <div>📍 Paris, France</div>
-      <div>🗓️ December 12–13, 2026</div>
-      <div>🏛️ NeurIPS 2026</div>
-      <div>📄 Non-archival</div>
+    <div class="hero-lockup">
+      <img class="hero-logo" src="images/palm-icon.png" alt="PALM logo" />
+      <div class="hero-lt">
+        <h1 class="hero-wordmark">PALM</h1>
+        <p class="hero-sub">Personalized, aligned, long-term memory for AI systems</p>
+        <p class="hero-eventline">NeurIPS 2026 workshop · Paris · December 2026</p>
+      </div>
     </div>
-    <div class="btns">
+    <div class="btns" style="margin-top:34px;">
       <a class="btn btn-primary" href="#cfp">Submit a Paper →</a>
       <a class="btn btn-ghost" href="#speakers">Invited Speakers</a>
     </div>
@@ -220,7 +225,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">01</span><h2>About the Workshop</h2></div>
     <p class="lead">Long-term memory is becoming a core component of modern AI systems. Conversational assistants and agentic systems are increasingly expected to retain information across sessions, personalize to users, reason over long horizons, and act consistently across tasks, tools, and modalities. This shift moves AI systems beyond single-context interactions toward persistent memory layers that encode, retrieve, update, and sometimes forget past experience.</p>
-    <p style="margin-top:20px; color:var(--muted); font-size:17px; text-align:justify;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop will bring together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
+    <p style="margin-top:20px; color:var(--muted); font-size:18.5px; text-align:justify;">PALM is a workshop on <strong>safe, personalized, and long-term memory for AI agents and conversational assistants</strong>. The workshop will bring together researchers working on memory architectures, personalization, multimodal and embodied memory, agentic and multi-agent memory, cognitive and neuroscience-inspired memory, evaluation, and safety. Our goal is to build a shared research agenda around how AI systems should remember, what they should forget, how memory should be evaluated, and how persistent memory can be made controllable, transparent, and safe.</p>
   </div>
 </section>
 
