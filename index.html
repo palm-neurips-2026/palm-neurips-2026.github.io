@@ -141,6 +141,8 @@
 
   /* PEOPLE */
   .people { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+  .people.center { display: flex; flex-wrap: wrap; justify-content: center; gap: 34px 24px; }
+  .people.center .person { width: 190px; }
   .person { text-align: center; }
   .avatar {
     width: 118px; height: 118px; border-radius: 50%; margin: 0 auto 14px;
@@ -321,7 +323,7 @@
 <section id="organizers">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">07</span><h2>Organizers</h2></div>
-    <div class="grid people" style="margin-top:26px;">
+    <div class="grid people center" style="margin-top:26px;">
       <div class="person"><img class="avatar" src="images/organizers/mario-fritz.jpg" alt="Mario Fritz" loading="lazy" /><div class="nm">Mario Fritz</div><div class="af">CISPA Helmholtz Center</div></div>
       <div class="person"><img class="avatar" src="images/organizers/seong-joon-oh.jpg" alt="Seong Joon Oh" loading="lazy" /><div class="nm">Seong Joon Oh</div><div class="af">KAIST</div></div>
       <div class="person"><img class="avatar" src="images/organizers/sahar-abdelnabi.jpg" alt="Sahar Abdelnabi" loading="lazy" /><div class="nm">Sahar Abdelnabi</div><div class="af">ELLIS Institute Tübingen<br>&amp; MPI-IS</div></div>
