@@ -96,6 +96,9 @@
   .btn-primary:hover { text-decoration: none; transform: translateY(-1px); background: #0a6b57; }
   .btn-ghost { background: rgba(255,255,255,0.72); color: var(--forest); border: 1px solid var(--line); }
   .btn-ghost:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+  .btn-soon { background: #e6efe9; color: var(--muted); border: 1px solid var(--line); cursor: default; pointer-events: none; }
+  .badge-soon { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); }
+  .badge-soon::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(14,138,114,0.18); }
 
   /* SECTIONS */
   section { padding: 74px 0; border-bottom: 1px solid var(--line); }
@@ -216,7 +219,7 @@
       </div>
     </div>
     <div class="btns" style="margin-top:34px;">
-      <a class="btn btn-primary" href="#cfp">Submit a Paper →</a>
+      <span class="btn btn-soon" aria-disabled="true">Submissions open soon</span>
       <a class="btn btn-ghost" href="#speakers">Invited Speakers</a>
     </div>
   </div>
@@ -269,7 +272,11 @@
       <li><strong>LLM usage policy:</strong> AI-generated papers are not allowed. AI assistance is permitted, but submissions must be primarily human-authored, reflecting original thought and analysis.</li>
     </ul>
 
-    <div style="margin-top:30px;"><a class="btn btn-primary" style="background:var(--accent); color:#fff;" href="https://openreview.net/">Submit on OpenReview</a></div>
+    <div style="margin-top:30px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+      <span class="btn btn-soon" aria-disabled="true">Submit on OpenReview</span>
+      <span class="badge-soon">Opening very soon</span>
+    </div>
+    <p style="margin-top:12px; color:var(--muted); font-size:14.5px;">The OpenReview submission portal will open shortly — the link will be posted here.</p>
   </div>
 </section>
 
