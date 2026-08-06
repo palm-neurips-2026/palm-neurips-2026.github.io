@@ -191,6 +191,25 @@
   .policy li::marker { color: var(--accent-2); }
   .policy li strong { color: var(--forest); }
 
+  /* FAQ ACCORDION */
+  .faq { margin-top: 8px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:first-child { border-top: 0; }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 20px 24px; padding-right: 52px; position: relative;
+    font-family: "Fraunces", serif; font-weight: 600; font-size: 18px; color: var(--forest); line-height: 1.35;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary:hover { background: var(--soft); }
+  .faq summary::after {
+    content: ""; position: absolute; right: 24px; top: 26px; width: 11px; height: 11px;
+    border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg); transform-origin: center; transition: transform 0.2s ease;
+  }
+  .faq details[open] summary::after { transform: rotate(-135deg); }
+  .faq .faq-a { padding: 0 24px 22px; color: var(--muted); font-size: 16.5px; }
+  .faq .faq-a a { color: var(--accent); font-weight: 600; word-break: break-word; }
+
   /* FOOTER */
   footer { padding: 52px 0; background: var(--forest); color: #cfe3d8; }
   footer .wrap { display:flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
@@ -221,6 +240,7 @@
       <a href="#schedule">Schedule</a>
       <a href="#speakers">Speakers</a>
       <a href="#organizers">Organizers</a>
+      <a href="#faq">FAQ</a>
     </div>
   </div>
 </nav>
@@ -239,6 +259,7 @@
     <div class="btns" style="margin-top:34px;">
       <a class="btn btn-primary" href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/PALM" target="_blank" rel="noopener">Submit a Paper →</a>
       <a class="btn btn-ghost" href="#speakers">Invited Speakers</a>
+      <a class="btn btn-ghost" href="https://forms.gle/QeVHzqjr7CkN5o777" target="_blank" rel="noopener">Call for Reviewers</a>
     </div>
   </div>
 </header>
@@ -355,6 +376,39 @@
       <div class="person"><img class="avatar" src="images/organizers/haritz-puerto.jpg" alt="Haritz Puerto" loading="lazy" /><div class="nm">Haritz Puerto</div><div class="af">ELLIS Institute Tübingen<br>&amp; MPI-IS</div></div>
       <div class="person"><img class="avatar" src="images/organizers/ivaxi-sheth.jpg" alt="Ivaxi Sheth" loading="lazy" /><div class="nm">Ivaxi Sheth</div><div class="af">CISPA Helmholtz Center</div></div>
       <div class="person"><img class="avatar" src="images/organizers/seokwon-jung.jpg" alt="Seokwon Jung" loading="lazy" /><div class="nm">Seokwon Jung</div><div class="af">KAIST</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Frequently Asked Questions</h2></div>
+    <div class="faq">
+      <details>
+        <summary>Can I submit a paper that is under review at NeurIPS or another conference/journal?</summary>
+        <div class="faq-a">That is fine for us, but you should double-check policies of that other conference/journal.</div>
+      </details>
+      <details>
+        <summary>Can I submit to another NeurIPS workshop as well?</summary>
+        <div class="faq-a">That is fine for us, but you should double-check policies of that other conference/journal.</div>
+      </details>
+      <details>
+        <summary>Can I review?</summary>
+        <div class="faq-a">Yes! We are actively recruiting reviewers. Please register here <a href="https://forms.gle/QeVHzqjr7CkN5o777" target="_blank" rel="noopener">https://forms.gle/QeVHzqjr7CkN5o777</a>. We required reviewers to have at least one paper accepted at a major AI conference (e.g., NeurIPS, ICLR, ICML, *ACL, EMNLP, AAAI, etc)</div>
+      </details>
+      <details>
+        <summary>If I submit a paper, do I have to review?</summary>
+        <div class="faq-a">If one of your authors qualifies for reviewing (see above), we ask you to nominate one reviewer</div>
+      </details>
+      <details>
+        <summary>My paper was rejected at NeurIPS, can I submit it to the workshop too?</summary>
+        <div class="faq-a">If your paper was reviewed at NeurIPS 2026, your average rating is equal or higher than 3 (borderline reject), and your paper fits the topic of the workshop, you can submit it here together with the reviews and your response. This is a second route into the workshop. In this case, the deadline for submission is October 1st, 2026. We will give a light review and consider it for presentation. We expect decisions within one or two weeks. Because the workshop is non-archival, presenting here does not affect where you send the paper elsewhere.</div>
+      </details>
+      <details>
+        <summary>My paper was accepted at NeurIPS, can I submit it to the workshop too?</summary>
+        <div class="faq-a">Yes! If your paper fits the topic of the workshop, please, submit your paper together with the reviews and we will consider it for presentation. In this case, the deadline for submission is October 1st, 2026, and we expect to make decisions within one or two weeks.</div>
+      </details>
     </div>
   </div>
 </section>
