@@ -215,6 +215,17 @@
   footer .wrap { display:flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
   footer a { color: var(--amber); }
   footer .fbrand { font-family:"Fraunces", serif; font-weight:600; color:#fff; font-size: 20px; }
+  .fright { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; font-size: 14px; }
+  .socials { display: flex; gap: 12px; }
+  .socials a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.20);
+    color: #eaf4ee; transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .socials a:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-2px); }
+  .socials svg { width: 18px; height: 18px; fill: currentColor; display: block; }
+  @media (max-width: 760px) { .fright { align-items: flex-start; } }
 
   @media (max-width: 760px) {
     .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background:#fff; flex-direction: column; padding: 12px 24px; border-bottom: 1px solid var(--line); }
@@ -351,7 +362,7 @@
     <div class="sec-head"><span class="sec-num">06</span><h2>Invited Speakers</h2></div>
     <div class="grid people" style="margin-top:8px;">
       <div class="person"><img class="avatar" src="images/speakers/weiwen-liu.jpg" alt="Weiwen Liu" loading="lazy" /><div class="nm">Weiwen Liu</div><div class="af">Shanghai Jiao Tong University</div></div>
-      <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
+      <div class="person"><img class="avatar" src="images/speakers/tsendsuren-munkhdalai.jpg" alt="Tsendsuren Munkhdalai" loading="lazy" /><div class="nm">Tsendsuren Munkhdalai</div><div class="af">Google</div></div>
       <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
       <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
       <div class="person"><div class="avatar" role="img" aria-label="TBA"></div><div class="nm">TBA</div><div class="af">Invited speaker</div></div>
@@ -423,8 +434,19 @@
       <div class="fbrand">PALM Workshop @ NeurIPS 2026</div>
       <div style="font-size:14px; margin-top:6px;">Personalized, Aligned, Long-Term Memory for AI Systems · Paris, December 2026</div>
     </div>
-    <div style="font-size:14px;">
+    <div class="fright">
       <a href="mailto:palm-neurips-2026@googlegroups.com">palm-neurips-2026@googlegroups.com</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/palm-workshop-neurips-2026" target="_blank" rel="noopener" aria-label="PALM Workshop on LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="https://x.com/PALMNeurips2026" target="_blank" rel="noopener" aria-label="PALM Workshop on X" title="X">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93zm-1.29 19.5h2.04L6.48 3.24H4.29l13.32 17.41z"/></svg>
+        </a>
+        <a href="https://bsky.app/profile/palm-neurips-2026.bsky.social" target="_blank" rel="noopener" aria-label="PALM Workshop on Bluesky" title="Bluesky">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M5.2 3.4c2.75 2.07 5.7 6.26 6.8 8.51 1.1-2.25 4.05-6.44 6.8-8.51 1.98-1.49 5.2-2.65 5.2.99 0 .73-.42 6.11-.66 6.98-.85 3.04-3.96 3.81-6.72 3.34 4.83.82 6.06 3.54 3.4 6.27-5.04 5.17-7.25-1.3-7.82-2.95-.1-.3-.15-.44-.2-.44s-.1.14-.2.44c-.57 1.66-2.78 8.12-7.82 2.95-2.65-2.72-1.43-5.45 3.4-6.27-2.76.47-5.87-.3-6.72-3.34C.42 10.5 0 5.12 0 4.39c0-3.64 3.22-2.48 5.2-.99z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
