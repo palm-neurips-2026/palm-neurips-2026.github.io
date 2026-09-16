@@ -227,6 +227,17 @@
   .socials svg { width: 18px; height: 18px; fill: currentColor; display: block; }
   @media (max-width: 760px) { .fright { align-items: flex-start; } }
 
+  /* ACKNOWLEDGEMENTS */
+  .ack { background: var(--soft); border-top: 1px solid var(--line); padding: 34px 0; }
+  .ack .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px 40px; }
+  .ack-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .ack-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 30px 44px; }
+  .ack-logos a { display: inline-flex; align-items: center; opacity: 0.9; transition: opacity 0.2s; }
+  .ack-logos a:hover { opacity: 1; }
+  .ack-logos img { display: block; width: auto; }
+  .ack-logos .elsa { height: 52px; }
+  .ack-logos .elliot { height: 26px; }
+
   @media (max-width: 760px) {
     .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background:#fff; flex-direction: column; padding: 12px 24px; border-bottom: 1px solid var(--line); }
     .nav-links.open { display: flex; }
@@ -407,6 +418,17 @@
         <summary>If I submit a paper, do I have to review?</summary>
         <div class="faq-a">If one of your authors qualifies for reviewing (see above), we ask you to nominate one reviewer</div>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- ACKNOWLEDGEMENTS -->
+<section class="ack">
+  <div class="wrap">
+    <span class="ack-label">Partially supported by</span>
+    <div class="ack-logos">
+      <a href="https://elsa-ai.eu/" target="_blank" rel="noopener" aria-label="ELSA — European Lighthouse on Secure and Safe AI"><img class="elsa" src="images/partners/elsa.png" alt="ELSA" loading="lazy" /></a>
+      <a href="https://elliot-ai.eu/" target="_blank" rel="noopener" aria-label="ELLIOT"><img class="elliot" src="images/partners/elliot.svg" alt="ELLIOT" loading="lazy" /></a>
     </div>
   </div>
 </section>
